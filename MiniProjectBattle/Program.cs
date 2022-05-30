@@ -20,6 +20,15 @@ namespace MiniProjectBattle
             "K I C K !"
         };
 
+        public static List<KeyValuePair<string, string>> mainMenu = new List<KeyValuePair<string, string>>()
+        {
+            new KeyValuePair<string, string>("P", "Punch"),
+            new KeyValuePair<string, string>("K", "Kick"),
+            new KeyValuePair<string, string>("B", "Block"),
+            new KeyValuePair<string, string>("Q", "Quit");
+
+        }
+
         public static string PrintResult(bool displayWinLose, string cpuChoice)
         {
             return (displayWinLose) ? "You have won the match!" : $" The Computer has won the match!"
