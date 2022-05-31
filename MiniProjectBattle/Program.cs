@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MiniProjectBattle
 {
@@ -33,5 +34,23 @@ namespace MiniProjectBattle
         {
             return (displayWinLose) ? "You have won the match!" : $" The Computer has won the match!"
         }
+
+        public static void MainConsole()
+    {
+        ConsoleKeyInfo userInput;
+        do
+        {
+            Random RandoNum = new Random();
+            KeyValuePair<string, string> cpuInput = mainMenu.ElementAt(randomNum.Next(mainMenu.count - 1));
+            Console.WriteLine("Welcome to the DOJO!");
+            Console.WriteLine("Your choices are displayed on the screen.");
+            Console.WriteLine("Please choose one of the following or press Q to leave the DOJO.");
+
+            foreach (KeyValuePair<string, string> option in mainMenu)
+            {
+                Console.WriteLine($"{option.Key} {option.Value}");
+            }
+        }
+    }
     }
 }
